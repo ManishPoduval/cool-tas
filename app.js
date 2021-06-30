@@ -29,6 +29,9 @@ app.locals.title = `${capitalized(projectName)} created with Ironlauncher`;
 const index = require("./routes/index");
 app.use("/", index);
 
+const yanisRoutes = require('./routes/yanis.routes')
+app.use('/', yanisRoutes)
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
