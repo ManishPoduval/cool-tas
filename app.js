@@ -32,7 +32,11 @@ app.use("/", index);
 // 👇 Start handling routes here
 const manishRoutes = require("./routes/manish.routes");
 app.use("/", manishRoutes);
+
 app.use("/", require("./routes/pablo.routes"));
+
+const yanisRoutes = require('./routes/yanis.routes')
+app.use('/', yanisRoutes)
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
